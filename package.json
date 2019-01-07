@@ -3,6 +3,8 @@
 	"displayName": "Launch git history",
 	"description": "",
 	"version": "0.0.1",
+	"publisher": "ollyhayes",
+	"repository": "https://github.com/ollyhayes/launch-git-history",
 	"engines": {
 		"vscode": "^1.30.0"
 	},
