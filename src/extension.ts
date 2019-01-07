@@ -14,21 +14,16 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
+	let disposable = vscode.commands.registerCommand('extension.launchHistory', () => {
 		// The code you place here will be executed every time your command is executed
 
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World!');
 
 			// Use the console to output diagnostic information (console.log) and errors (console.error)
 
 			const currentDocument = vscode.window.activeTextEditor;
 
-			console.log(`runing`);
-
 			if (currentDocument) {
 				const path = currentDocument.document.uri;
-				vscode.window.showInformationMessage(`current document is: ${path}`);
 
 				exec(`"C:\\Program Files (x86)\\GitExtensions\\gitex.cmd" filehistory ${path.fsPath}`, error => console.log(error));
 			}
